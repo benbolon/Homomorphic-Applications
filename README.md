@@ -22,7 +22,7 @@ implementing this tool more widely? Three general reasons:
 
 1. Computations over encrypted datasets are inefficient.
 2. Difficulty or inability to verify results.
-3. It is simply difficult to construct meaningful applications utilizing HE.
+3. Difficulty in constructing meaningful applications utilizing HE.
 
 Solving these issues is necessary to the adoption of this tool, but these are not easy problems to solve. SO, is
 it worth it? Personally, I believe it is. Databreaches are an increasing occurance and the implementation of this
