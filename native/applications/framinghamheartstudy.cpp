@@ -4,7 +4,11 @@
 using namespace std;
 using namespace seal;
 
-int main()
+/*
+THIS CODE SHOULD BE UPDATED TO REFLECT THE NEWEST MATHS FOR CALCULATING LIKLIHOOD OF H.A.. THE TAYLOR SERIES EQUATION IS NOT CALC IN ENCRYPTED FORM. FIX THAT.
+*/
+
+void FraminghamHeartStudy()
 {
     EncryptionParameters parms(scheme_type::CKKS);
 
