@@ -86,7 +86,7 @@ int main()
        Taylor series approximation and Exact equation.
     */
     double constant = 1.0 / 2;
-
+    
     double result = constant + (x * taylor_coef[0]) - (taylor_coef[1] * pow(x, 3)) + (taylor_coef[2] * pow(x, 5)) - (taylor_coef[3] * pow(x, 7));
     double true_result = exp(x) / (exp(x) + 1);
     cout << result << endl;
