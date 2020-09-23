@@ -37,15 +37,15 @@ Place Holder
 # SEAL Applications
 
 ## Framingham Heart Study
-The Framingham Heart Study followed roughly 5000 patients over the course of many decades starting in 1948, and again added another cohort of 5000, which consisted of the spouses and children of those in the original study and then similarly added another 5000 in the years proceeding. The aim of this study was to develop a method of predicting the likelihood of Cardiovascular Disease (CVD). Although many health-related variables were recorded during observation in the study, six were used in what would become a logistic regression model for calculating the likelihood of heart attack in men. These predictive variables included age, height, weight, systolic blood pressure (SBP), diastolic blood pressure (DBP), and cholesterol levels (CHL). These are the values, which will be encrypted prior to the computations described in the predictive model given by the logistic regression function:
+The Framingham Heart Study followed roughly 5000 patients over the course of many decades starting in 1948, and again added another cohort of 5000, which consisted of the spouses and children of those in the original study and then similarly added another 5000 in the years proceeding. The aim of this study was to develop a method of predicting the likelihood of Cardiovascular Disease (CVD). Although many health-related variables were recorded during observation in the study, six were used in what would become a logistic regression model for calculating the likelihood of heart attack in men. These predictive variables included age, height, weight, systolic blood pressure (SBP), diastolic blood pressure (DBP), and cholesterol levels (CHL). These are the values, which will be encrypted prior to computation. The predictive model is described below:
 
-Equation 1 – P(x) =  e^x/(e^x+1)
+Equation 1 – x = 0.072∙Age+0.013∙SBP-0.029∙DBP+0.008∙CHL-0.053∙height+0.021∙weight
 
-Where x is the sum of the weighted variables described by the following:
+Where x is used in the below logistic regression:
 
-Equation 2 – x = 0.072∙Age+0.013∙SBP-0.029∙DBP+0.008∙CHL-0.053∙height+0.021∙weight
+Equation 2 – P(x) =  e^x/(e^x+1)
 
-Equation 1 used in this application is common throughout statistical analysis and machine learning techniques. For the application, one may wish to convert this logistic regression into an approximation portrayed below as a truncated Taylor series:
+Equation 2 used in this application is common throughout statistical analysis and machine learning techniques. For the application, this equation must be converted into an approximation portrayed below as a truncated Taylor series:
 
 Equation 3 – P(x) = 1/2+1/4∙x-1/48∙x^3+1/480∙x^5-17/80640∙x^7+O(x^11)
 
