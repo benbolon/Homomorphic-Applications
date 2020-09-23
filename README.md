@@ -43,11 +43,11 @@ Equation 1 – P(x) =  e^x/(e^x+1)
 
 Where x is the sum of the weighted variables described by the following:
 
-Equation 2 – x = 0.072∙Age+0.013∙SBP- 0.029∙DBP+0.008∙CHL-0.053∙height+0.021∙weight
+Equation 2 – x = 0.072∙Age+0.013∙SBP-0.029∙DBP+0.008∙CHL-0.053∙height+0.021∙weight
 
 Equation 1 used in this application is common throughout statistical analysis and machine learning techniques. For the application, one may wish to convert this logistic regression into an approximation portrayed below as a truncated Taylor series:
 
-Equation 3 – P(x) = 1/2  +  1/4 x -  1/48 x^3+  1/480 x^5-  17/80640 x^7+O(x^11)
+Equation 3 – P(x) = 1/2+1/4∙x-1/48∙x^3+1/480∙x^5-17/80640∙x^7+O(x^11)
 
 
 
