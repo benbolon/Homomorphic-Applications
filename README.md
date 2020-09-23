@@ -27,6 +27,15 @@ implementing this tool more widely? Three general reasons:
 Solving these issues is necessary to the adoption of this tool, but these are not easy problems to solve. SO, is
 it worth it? Personally, I believe it is. Databreaches are an increasing occurance and the implementation of this
 tool has the ability to mitigate data theft and loss in variety of industries. The most relevant being the medical
-industry, which must properly secure senstive data and maintain an ability to interact with it in a meaningful way. 
+industry, which must properly secure senstive data and maintain an ability to interact with it in a meaningful way.
+
+## Microsoft SEAL
+Place Holder
+
+# Installing Microsoft SEAL
+
+# SEAL Applications
+
+## Framingham Heart Study
 
   
