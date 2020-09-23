@@ -4,14 +4,7 @@
 using namespace std;
 using namespace seal;
 
-/*
-ETHICAL DISCLAIMER: THE DATASET USED TO CALCULATE THE EQUATION FOR X UTILIZED A DATASET OF ONLY MALE PATIENTS.
-
-THIS CODE WILL BE UPDATED TO REFLECT THE NEWEST MATHS FOR CALCULATING LIKLIHOOD OF H.A..
-THE TAYLOR SERIES IS NOT CALCULATED IN ENCRYPTED FORM FOR EFFICIENCY/PRECISION REASONS.
-*/
-
-void FraminghamHeartStudy()
+int main()
 {
     EncryptionParameters parms(scheme_type::CKKS);
 
@@ -75,6 +68,22 @@ void FraminghamHeartStudy()
 
     // Taylor series coefficients
     vector<double> taylor_coef{ 1.0 / 4, 1.0 / 48, 1.0 / 480, 17.0 / 80640, 31 / 1451520 };
+    vector<Plaintext> plain_taylor_coef;
+    for (auto wt : taylor_coef)
+    {
+        Plaintext p;
+        encoder.encode(wt, scale, p);
+        plain_taylor_coef.emplace_back(move(p));
+    }
+
+    Ciphertext first_x_val;
+    evaluator.multiply_plain(cipher_var_result, plain_taylor_coef[0], first_x_val);
+    for (int i = 1; i < 4; ++i)
+    {
+        Ciphertext powerofx;
+        // Correct below by using relinearization
+        evaluator.exponentiate(cipher_var_result, 2 * i + 1, powerofx);
+    }
 
     // Decrypt Results
     Plaintext plain_result;
@@ -93,7 +102,7 @@ void FraminghamHeartStudy()
        Taylor series approximation and Exact equation.
     */
     double constant = 1.0 / 2;
-    
+
     double result = constant + (x * taylor_coef[0]) - (taylor_coef[1] * pow(x, 3)) + (taylor_coef[2] * pow(x, 5)) - (taylor_coef[3] * pow(x, 7));
     double true_result = exp(x) / (exp(x) + 1);
     cout << result << endl;
