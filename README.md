@@ -49,6 +49,8 @@ Equation 2 used in this application is common throughout statistical analysis an
 
 Equation 3 – P(x) = 1/2+1/4∙x-1/48∙x^3+1/480∙x^5-17/80640∙x^7+O(x^11)
 
+Author's Note: Another great example of using the above equations in Microsoft SEAL is featured in the Manual for "Using Homomorphic Encryption for Bioinformatics". This is an excellent source of indepth information and examples on the use of Microsoft SEAL. I would recommend anyone who is interested in learning more about SEAL and HE to consult this document. Keep in mind, however, that it uses an earlier version of SEAL.
+
 
 
 
