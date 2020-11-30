@@ -8,8 +8,8 @@ A collection of applications utilizing Homomorphic Encryption.
   - [Downloading Microsoft SEAL](#downloading-microsoft-seal)
   - [Constructing the SEAL Coding Environment](#constructing-the-seal-coding-environment)
 - [Installing Microsoft SEAL](#installing-microsoft-seal)
-- [SEAL Applications]
-  - [Framingham Heart Study]
+- [SEAL Applications](#seal-applications)
+  - [Framingham Heart Study](#framingham-heart-study)
   
 # Introduction
 
@@ -32,6 +32,8 @@ industry, which must properly secure senstive data and maintain an ability to in
 therefore the case that this repository seeks to assist in solving *PROBLEM 3* by providing an understanding of HE and its proper utilization.** 
 
 ## Microsoft SEAL
+
+SEAL is a set of libraries created by Microsoft, which allows one to, and I use this term loosely, *easily* construct applications utilizing HE. 
 
 ## Downloading Microsoft SEAL
 
