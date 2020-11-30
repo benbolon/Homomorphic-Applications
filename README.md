@@ -5,6 +5,8 @@ A collection of applications utilizing Homomorphic Encryption.
 - [Introduction](#introduction)
   - [Homomorphic Encryption](#homomorphic-encryption)
   - [Microsoft SEAL](#microsoft-seal-1)
+  - [Downloading Microsoft SEAL](#downloading-microsoft-seal)
+  - [Constructing the SEAL Coding Environment](#constructing-the-seal-coding-environment)
 - [Installing Microsoft SEAL](#installing-microsoft-seal)
 - [SEAL Applications]
   - [Framingham Heart Study]
@@ -26,13 +28,17 @@ implementing this tool more widely? Three general reasons:
 Solving these issues is necessary to the adoption of this tool, but these are not easy problems to solve, which begs
 the question is it worth it? Personally, I believe it is. Databreaches are an increasing occurance and the implementation
 of this tool has the ability to mitigate data theft and loss in a variety of industries. The most relevant being the medical
-industry, which must properly secure senstive data and maintain an ability to interact with it in a meaningful way.
+industry, which must properly secure senstive data and maintain an ability to interact with it in a meaningful way. **It is
+therefore the case that this repository seeks to assist in solving *PROBLEM 3* by providing an understanding of HE and its proper utilization.** 
 
 ## Microsoft SEAL
-Place Holder
 
-# Installing Microsoft SEAL
-Place Holder
+## Downloading Microsoft SEAL
+
+Using the program “Git Bash”, we can clone the Microsoft SEAL GitHub repository using the command “git clone https://github.com/microsoft/SEAL.git” (this url is subject to change for later releases of SEAL). Following this command, you will now have a file “SEAL” containing the necessary libraries. The final step to ensuring that all essential files have been downloaded is to open file “C:/…/SEAL/SEAL.sln” using Visual Studio, or similar IDE, and build the SEAL project file located in the folder “native”. If the build runs successfully without errors then all required tools for building in SEAL have been downloaded correctly and it is now possible to construct the coding environment for future projects.
+
+## Constructing the SEAL Coding Environment
+Going forward, I will be using Microsoft's Visual Studio: To construct a SEAL coding environment, one must create a new C++ project and link this project logically to the SEAL encryption libraries. The most straight forward method for accomplishing this is creating a new “Empty Project” and then adjusting the properties of this new project. One can find project properties, by right clicking the project within the Visual Studio IDE. Once in properties the user should input the address for the SEAL source code in “Additional Include Directories” below the “C++” tab. Most often the source code file will be in the directory “C:\..\SEAL\native\src”. While in the “C++” tab, be sure that the C++ language being used is “ISO C++ 17 Standard”. Next, within the “Linker” tab add the file path “C:\..\SEAL\lib\$(Platform)\$(Configuration)” to “Additional Library Directories”. Finally, in “Input”, also under the “Linkage” tab, add “seal.lib;” to “Additional Dependencies”. In order to ensure that all necessary directories have been included, the user can add a blank “.cpp” file under the project tab. Following this, the user should type the code “#include “seal/seal.h””. If Visual Studio recognizes this header file then the environment is suitable for further coding.
 
 # SEAL Applications
 
