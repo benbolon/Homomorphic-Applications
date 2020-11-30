@@ -21,11 +21,11 @@ implementing this tool more widely? Three general reasons:
 
 1. Computations over encrypted datasets are inefficient.
 2. Difficulty or inability to verify results.
-3. Difficulty in constructing meaningful applications utilizing HE.
+3. Expertise necessary to construct meaningful applications utilizing HE is rare.
 
-Solving these issues is necessary to the adoption of this tool, but these are not easy problems to solve. SO, is
-it worth it? Personally, I believe it is. Databreaches are an increasing occurance and the implementation of this
-tool has the ability to mitigate data theft and loss in a variety of industries. The most relevant being the medical
+Solving these issues is necessary to the adoption of this tool, but these are not easy problems to solve, which begs
+the question is it worth it? Personally, I believe it is. Databreaches are an increasing occurance and the implementation
+of this tool has the ability to mitigate data theft and loss in a variety of industries. The most relevant being the medical
 industry, which must properly secure senstive data and maintain an ability to interact with it in a meaningful way.
 
 ## Microsoft SEAL
