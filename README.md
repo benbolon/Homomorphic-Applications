@@ -4,10 +4,10 @@ A collection of applications utilizing Homomorphic Encryption.
 # Contents
 - [Introduction](#introduction)
   - [Homomorphic Encryption](#homomorphic-encryption)
+- [Installing Microsoft SEAL](#installing-microsoft-seal)
   - [Microsoft SEAL](#microsoft-seal-1)
   - [Downloading Microsoft SEAL](#downloading-microsoft-seal)
   - [Constructing the SEAL Coding Environment](#constructing-the-seal-coding-environment)
-- [Installing Microsoft SEAL](#installing-microsoft-seal)
 - [SEAL Applications](#seal-applications)
   - [Framingham Heart Study](#framingham-heart-study)
   
@@ -30,6 +30,8 @@ the question is it worth it? Personally, I believe it is. Databreaches are an in
 of this tool has the ability to mitigate data theft and loss in a variety of industries. The most relevant being the medical
 industry, which must properly secure senstive data and maintain an ability to interact with it in a meaningful way. **It is
 therefore the case that this repository seeks to assist in solving *PROBLEM 3* by providing an understanding of HE and its proper utilization.** 
+
+# Installing Microsoft SEAL
 
 ## Microsoft SEAL
 
